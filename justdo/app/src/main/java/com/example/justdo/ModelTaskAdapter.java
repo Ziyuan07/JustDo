@@ -30,7 +30,6 @@ public class ModelTaskAdapter extends RecyclerView.Adapter<ModelTaskAdapter.Task
     private Context mContext;
     private String ndates;
     private String mTitle;
-    private String mDescription;
     private String post_key = "";
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -65,7 +64,6 @@ public class ModelTaskAdapter extends RecyclerView.Adapter<ModelTaskAdapter.Task
             public void onClick(View view) {
                 mTitle = mModelTask.getTask();
                 ndates = mModelTask.getDate();
-                mDescription = mModelTask.getDescription();
                 post_key = mModelTask.getId();
                 deleteData();
             }
@@ -150,7 +148,6 @@ public class ModelTaskAdapter extends RecyclerView.Adapter<ModelTaskAdapter.Task
                 Map<String, Object> dTasks = new HashMap<>();
                 dTasks.put("Title", mTitle);
                 dTasks.put("Date", ndates);
-                dTasks.put("Description", mDescription);
 
                 // Add a new document with a generated ID
                 db.collection("DoneTasks")

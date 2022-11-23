@@ -26,7 +26,6 @@ import java.util.Map;
 
 public class AddActivity extends AppCompatActivity  {
     private EditText mTitle;
-    private EditText mDescription;
     private TextView mTasks;
     private TextView ndates;
     private ImageView mcalender;
@@ -41,7 +40,6 @@ public class AddActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_add);
 
         mTitle = findViewById(R.id.input_title);
-        mDescription = findViewById(R.id.input_description);
         mTasks = findViewById(R.id.Tasks);
         ndates = findViewById(R.id.dates);
         mcalender = findViewById(R.id.Date_picker);
@@ -76,7 +74,6 @@ public class AddActivity extends AppCompatActivity  {
                 // Create new task
                 String mTitle2 = mTitle.getText().toString();
                 String ndates2 = ndates.getText().toString();
-                String mDescription2 = mDescription.getText().toString();
                 if(mTitle2.isEmpty()){
                     mTitle.setError("Title required");
                     mTitle.requestFocus();
@@ -87,16 +84,10 @@ public class AddActivity extends AppCompatActivity  {
                     ndates.requestFocus();
                     return;
                 }
-                else if(mDescription2.isEmpty()){
-                    mDescription.setError("Description required");
-                    mDescription.requestFocus();
-                    return;
-                }
                 else{
                 Map<String, Object> nTasks = new HashMap<>();
                 nTasks.put("Title", mTitle.getText().toString());
                 nTasks.put("Date", ndates.getText().toString());
-                nTasks.put("Description", mDescription.getText().toString());
                 Toast.makeText(AddActivity.this, "Task added successfully!", Toast.LENGTH_LONG).show();
 
                 // Add a new document

@@ -27,35 +27,19 @@
 
     <EditText
         android:id="@+id/input_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="356dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/Tasks"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="30dp"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:hint="Enter your Task Name here:"
-        android:textColorHint="#A1A1A1"
-        android:minLines="1"
+        android:hint="Enter your Task here:"
         android:maxLines="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tasks"/>
-
-    <EditText
-        android:id="@+id/input_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Tasks"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="10dp"
+        android:minLines="1"
         android:textColor="@color/black"
-        android:textSize="15dp"
-        android:hint="Enter your Description here:"
         android:textColorHint="#A1A1A1"
-        android:minLines="4"
-        android:maxLines="4"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_title" />
+        app:layout_constraintTop_toBottomOf="@+id/Tasks" />
 
     <TextView
         android:id="@+id/dates"
