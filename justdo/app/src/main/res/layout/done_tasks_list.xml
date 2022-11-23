@@ -27,7 +27,7 @@
             android:background="@android:color/transparent"
             android:ellipsize="end"
             android:maxLength="16"
-            android:text="Generate Dodo application"
+            android:text="Generate JustDo application"
             android:textColor="@color/black"
             android:textSize="15sp" />
 
