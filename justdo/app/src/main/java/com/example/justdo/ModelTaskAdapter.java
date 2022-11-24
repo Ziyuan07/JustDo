@@ -68,15 +68,6 @@ public class ModelTaskAdapter extends RecyclerView.Adapter<ModelTaskAdapter.Task
                 deleteData();
             }
         });
-
-        //Toast their task description when user long press the task
-        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Toast.makeText(mContext, mModelTask.getDescription(), Toast.LENGTH_LONG).show();
-                return false;
-            }
-        });
     }
 
     @Override
